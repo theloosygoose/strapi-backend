@@ -4,7 +4,8 @@
   "info": {
     "singularName": "album",
     "pluralName": "albums",
-    "displayName": "Album"
+    "displayName": "Album",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,15 +18,15 @@
       "maxLength": 50
     },
     "Photos": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
     },
     "Description": {
       "type": "richtext"
@@ -35,6 +36,11 @@
       "maxLength": 4,
       "minLength": 3,
       "required": false
+    },
+    "handle": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
     }
   }
 }
